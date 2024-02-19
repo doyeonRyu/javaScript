@@ -1,0 +1,42 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center; /*To center-align the text in the body*/
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    padding: 40px; /*The spacing between sections*/
+}
+
+h2 {
+    color: #333;
+}
+
+.project { /* project를 class로 설정해 .project로 스타일 추가 가능*/
+    margin-bottom: 30px;
+}
+
+img {
+    max-width: 100%;
+    display: block; /* 이미지를 블록 요소로 변환합니다. */
+    margin: 0 auto; /* 좌우 여백을 자동으로 조정하여 이미지를 가운데 정렬합니다. */
+    width: 200px;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bold-text {
+    font-weight: bold;
+}

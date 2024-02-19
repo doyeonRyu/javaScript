@@ -1,0 +1,18 @@
+header {
+    background-color: #db60b2;
+    /*color: #fff;
+    text-align: center;
+    padding: 20px;
+    */
+}
+
+fieldset {
+    width: 500px; /* 원하는 너비로 조정 */
+    padding: 10px; /* 내부 여백 조정 */
+}
+
+fieldset input[type="checkbox"] {
+    transform: scale(1); /* 크기 조정 */
+    margin-right: 5px; /* 체크박스 사이의 간격 조정 */
+    vertical-align: middle; /* 텍스트와 수직 정렬 */
+}

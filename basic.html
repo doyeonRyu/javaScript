@@ -2,20 +2,24 @@
 <html>
     <head>
         <meta charset="EUC-KR">
+        <link rel="stylesheet" href="basicStyles.css">
         <title>basic html practice</title>
     </head>
     <body>
-        <!-- html comment(client에 전송되는 주석: 주의)-->
-        Hello&it;<br/><!-- 뭔지 모르겠음-->
-        <b><i>유도연</i></b>&nbsp;&nbsp;&nbsp;입니다.
-        <!-- b: 강조, i: 대각선 글씨, &nbsp: 한 칸 띄우기-->
-        <hr/>
-        <hr/>
-        <pre>
+        <header>
+            <!-- html comment(client에 전송되는 주석: 주의)-->
+            Hello&it;<br/><!-- 뭔지 모르겠음-->
+            <b><i>유도연</i></b>&nbsp;&nbsp;&nbsp;입니다.
+            <!-- b: 강조, i: 대각선 글씨, &nbsp: 한 칸 띄우기-->
+            <hr/>
+            <hr/>
+            <pre>
             Hello!
-            My name is Doyeon Ryu.
+            My name is <b>Doyeon Ryu</b>.
             This web page is to practice java script and html.
-        </pre>
+            </pre>
+        </header>
+
         <p>지금은 html의 기본 연습하는 시간</p>
         <h1>HTML연습 중~!</h1>
         <h2>HTML연습 중~!</h2>
@@ -25,11 +29,106 @@
         <h6>HTML연습 중~!</h6>
         <h7>HTML연습 중~!</h7>
         <font size="1" color="red" face="굴림">HTML연습 중~~</font>
-        <font size="1" color="red" face="굴림">HTML연습 중~~</font>
-        <font size="1" color="red" face="굴림">HTML연습 중~~</font>
-        <font size="1" color="red" face="굴림">HTML연습 중~~</font>
-        <font size="1" color="red" face="굴림">HTML연습 중~~</font>
-        <font size="1" color="red" face="굴림">HTML연습 중~~</font>
-        
+        <font size="2" color="green" face="HY견고딕">HTML연습 중~~</font>
+        <font size="3" color="blue" face="궁서">HTML연습 중~~</font>
+        <font size="4" color="skyblue" face="고딕">HTML연습 중~~</font>
+        <font size="5" color="yellow" face="바탕">HTML연습 중~~</font>
+        <font size="6" color="#ED4C00" face="굴림">HTML연습 중~~</font>
+        <p>This is <i>text</i> <b>test</b></p>
+        <h3>상대 경로로 이미지 삽입하기</h3>
+        <img src = "picturePt.jpg" width="300" height="200" border="1" alt="picture test"/>        
+        <!--
+        <img src = "./images/picturePt.jpg"/>
+        <img src = "picturePt.jpg"/>
+        -->
+        <br/> <!--줄 바꿈-->
+        <br/>
+        <br/>
+        <h3>절대 경로로 이미지 삽입하기</h3>
+        <!--
+        <img src = "/javaScript/images/picturePt.jpg"/>
+        -->
+
+        <h3>List 연습하기</h3>
+        <b>순서가 있는 목록</b>
+        <ol>
+            <li>list 1</li>
+            <li>list 2</li>
+            <li>list 3</li>
+            <li>list 4</li>
+        </ol>
+        <b>순서가 없는 목록</b>
+        <ul>
+            <li>list 1</li>
+            <li>list 2</li>
+            <li>list 3</li>
+            <li>list 4</li>
+        </ul>
+        <br/><br/>
+        <b>정의 리스트</b>
+        <dl>
+            <dt>client</dt>
+            <dt>클라이언트에 보여지는 페이지를 만드는 기술을 살펴본다.</dt>
+            <dt>server</dt>
+            <dt>DB연동이나 파일 작접을 할 수 있는 웹의 기술을 살펴본다.</dt>
+        </dl>
+
+        <h3>Table 연습하기</h3>
+        <table border="2" width="561"> <!--border: table 선-->
+            <tr bgcolor="skyblue">
+                <th>번호</th>
+                <th>제목</th>
+                <th>감독</th>
+            </tr>
+            <tr align="center">
+                <td>1</td>
+                <td>펄프픽션</td>
+                <td rowspan="2">쿠엔틴 타란티노</td> <!--위, 아래 두칸 합치기-->
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>바스터즈</td>
+            </tr>
+            <tr align="right">
+                <td>3</td>
+                <td>미치광이 피에로</td>
+                <td>장 뤽 고다르</td>
+            </tr>
+            <tr>
+                <td colspan="3">비고:<bt/> <!--옆 세칸 합치기-->
+                지금은 table을 작성하기 위해 필요한 태그를 연습 중입니다.</td>
+            </tr>
+        </table>
+        <h3>Form 연습하기</h3>
+        <form action="/submit_form.php" method="post">
+            <!--위의 php파일 어케 하는지 모르겠음-->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <br>
+            <fieldset>
+                <p><b>checkbox</b></p>
+                <input type="checkbox" name="subject1" value="python">Python
+                <input type="checkbox" name="subject1" value="C">C
+                <input type="checkbox" name="subject1" value="C++">C++
+                <input type="checkbox" name="subject1" value="java">Java
+                <input type="checkbox" name="subject1" value="all" checked="checked">ALL
+            </fieldset>
+            <label for="country">Select your country:</label><br>
+    <select id="country" name="country">
+        <option value="usa">USA</option>
+        <option value="korea">Korea</option>
+        <option value="uk">UK</option>
+        <option value="france">France</option>
+        <!-- Add more options as needed -->
+    </select><br><br>
+    <input type="submit" value="Submit">
+    <input type="submit" value="Cancel">
+        </form>
     </body>
 </html>
